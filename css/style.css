@@ -45,7 +45,7 @@ body {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px 0 15px;
+    padding: 0 15px;
     color: #ffffff;
 
     box-sizing: border-box;
@@ -53,6 +53,7 @@ body {
     z-index: 2;
 
 }
+
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -63,19 +64,13 @@ body {
     padding-top: 28px;
 }
 
-@media (min-width: 1200px) {
-    .menu-button {
-        display: none;
-    }    
-}
-
 .menu-button {
     width: 23px;
     height: 20px;
     position: relative;
     border: none;
     background-color: transparent;
-    margin-top: 27px;
+    margin-top: 50px;
 }
 
 .menu-button-label {
@@ -190,6 +185,10 @@ body {
 
     width: calc(25% - 3px);
     min-height: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
 
     background-color: #eff6f1;
     background-repeat: no-repeat;
@@ -231,12 +230,9 @@ body {
 
 .trend-card {
     width: 100%;
-    outline: 3px solid #b59f5b;
-    
+    border: 3px solid #b59f5b;
+
     padding: 30px;
-    margin-left: 24px;
-    margin-right: 24px;
-    margin-bottom: 19px;
 
     position: relative;
     z-index: 2;
@@ -253,8 +249,8 @@ body {
 
 .trend-post-link {
     text-decoration: none;
-    color: #ffffff; 
-}    
+    color: #ffffff;
+}
 
 .trend-post-link:hover {
     color: #b59f5b;
@@ -361,6 +357,7 @@ body {
 
 .post-content-text {
     font-size: 15px;
+    line-height: 1.46;
     font-weight: normal;
     color: #0f0d0e;
 }
@@ -387,7 +384,7 @@ body {
     content: "";
     position: absolute;
     bottom: -13px;
-    left: 106px;
+    left: calc(50% - 33px);
 
     background: #e1d9bd;
     width: 66px;
@@ -435,7 +432,7 @@ body {
     height: 48px;
 
     padding: 18px;
-    
+
     background: #f4f7f6;
     border: none;
     box-sizing: border-box;
@@ -461,7 +458,7 @@ body {
     width: 48px;
     height: 48px;
     border: none;
-    
+
     background-color: #b59f5b;
     background-image: url("../svg/search.svg");
     background-size: 18px 18px;
@@ -485,11 +482,12 @@ body {
 .subscription-button {
     width: 100%;
     height: 48px;
-    
+
     border: none;
     background: #b59f5b;
     color: #ffffff;
 
+    font-family: inherit;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
@@ -585,7 +583,7 @@ body {
 .shop-title {
     margin-bottom: 40px;
     text-align: center;
-}    
+}
 
 .shop-title-text {
     font-weight: bold;
@@ -619,24 +617,20 @@ body {
     width: 33.33%;
 }
 
-.product:nth-child(n+2) {
-    margin-left: 64px;
-}
-
 .product-img {
-    margin-left: 20px;
+    margin: 0 auto;
 }
 
 .product-wrapper {
     border: 3px solid #b59f5b;
     box-sizing: border-box;
 
-    padding-top: 46px;  
+    padding-top: 46px;
     padding-left: 20px;
     padding-right: 25px;
     padding-bottom: 25px;
     margin-top: -35px;
-    
+
     flex-grow: 1;
 }
 
@@ -733,11 +727,11 @@ body {
 
 .copiright-link {
     display: block;
-    
+
     font-size: 12px;
     font-weight: bold;
     text-decoration: none;
-    
+
     color: #999999;
     text-align: center;
 }
@@ -745,7 +739,7 @@ body {
 .popup {
     width: 100%;
     height: 100%;
-    
+
     position: fixed;
     left: 0;
     top: 0;
@@ -761,7 +755,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    padding: 48px 30px;
+    padding: 48px 30px 54px;
 
     position: absolute;
     left: calc(50% - 195px);
@@ -802,13 +796,13 @@ body {
 }
 
 .form-list {
-    width: 330px;
+    width: 100%;
     height: 48px;
 
     font-family: inherit;
     font-weight: normal;
     font-size: 13px;
-    color: rgba(0,0,0,0.54);
+    color: rgba(0, 0, 0, 0.54);
 
     background-color: #f4f7f6;
     background-image: url(../svg/form-arrows.svg);
@@ -862,7 +856,7 @@ body {
     margin-right: 4px;
 }
 
-.radio:checked + .radio-text::before {
+.radio:checked+.radio-text::before {
     background-image: url(../svg/form-circle.svg);
 }
 
@@ -876,7 +870,7 @@ body {
 }
 
 .form-field {
-    width: 330px;
+    width: 100%;
     height: 130px;
     resize: none;
     border: none;
@@ -885,7 +879,7 @@ body {
     font-family: inherit;
     font-weight: normal;
     font-size: 13px;
-    color: rgba(0,0,0,0.54);
+    color: rgba(0, 0, 0, 0.54);
 
     background-color: #f4f7f6;
     padding: 20px;
@@ -897,9 +891,9 @@ body {
 }
 
 .popup-button {
-    width: 330px;   
-    height: 48px;   
-     
+    width: 100%;
+    height: 48px;
+
     background: #b59f5b;
     color: #ffffff;
 
@@ -917,9 +911,9 @@ body {
     height: 20px;
 
     background-image: url(../svg/form-x.svg);
-    background-color: transparent;  
+    background-color: transparent;
     border: none;
-    
+
     position: absolute;
     right: 0;
     top: -25px;
@@ -929,3 +923,369 @@ body {
     display: none;
 }
 
+@media (min-width: 1200px) {
+    .menu-button {
+        display: none;
+    }
+
+    .product:nth-child(n+2) {
+        margin-left: 64px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .menu-list {
+        display: none;
+    }
+
+    .post-wrapper {
+        margin-top: 5px;
+        margin-left: 0; 
+    }   
+
+    .post {
+        margin-bottom: 45px;
+        position: relative;
+    }
+
+    .post:not(:last-child)::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: #eeeeee;
+
+        position: absolute;
+        bottom:  -5px;
+    }
+
+    .popup-close {
+        width: 28px;
+        height: 28px;
+        top: -30px;
+    }    
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+    .header {
+        background-image: url(../images/banner-bg-tablet.jpg);
+    }
+
+    .header-container {
+        margin: 0 auto;
+        padding: 0 35px;
+    }
+
+    .logo {
+        width: 158px;
+        padding-top: 40px;
+    }
+    
+    .welcome {
+        padding: 60px 30px 90px;
+    }
+
+    .welcome-title {
+        font-size: 40px;
+        line-height: 1.375;
+    }    
+
+    .trend-title-text {
+        font-size: 18px;
+    }    
+
+    .trend-title {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .trend-group {
+        flex-wrap: wrap;
+    }
+
+    .trend {
+        min-height: 247px;
+    }
+
+    .trend-post {
+        font-size: 17px;
+    }
+
+    .main-container {
+        flex-wrap: nowrap;
+        padding-left: 34px;
+        padding-right: 34px;
+        margin-top: 45px;
+    }
+
+    .main {
+        width: 390px;
+        margin-right: 35px;
+    }
+
+    .post {
+        flex-wrap: wrap;
+    }
+
+    .post-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .post-image-card,
+    .post-wrapper {
+        width: 100%;
+    }      
+    
+    .post-title-text {
+        font-size: 17px;
+        line-height: 1.29;
+        margin-top: 5px;
+    }    
+
+    .signature {
+        margin-bottom: 30px;
+    }
+
+    .shop-container,
+    .footer-container {
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+
+    .shop-title-text {
+        font-size: 18px;
+    }       
+
+    .shop-group {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product {
+        width: calc(50% - 11px);
+    }
+
+    .product:nth-child(odd) {
+        margin-right: 22px;
+    }
+
+    .product:nth-child(n+3) {
+        margin-top: 28px;
+    }
+
+    .product-title {
+        font-size: 17px;
+    }
+
+    .footer-container {
+        margin-top: 50px;
+    }
+
+    .social {
+        margin-bottom: 48px;
+    }
+
+    .form-title-text {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) 
+and (orientation: portrait) {
+    .trend {
+        width: calc(50% - 3px);
+    }
+
+    .trend:nth-child(odd) {
+        margin-left: 0;
+    }
+
+    .trend:nth-child(n+3) {
+        margin-top: 3px;
+    }
+}
+
+@media (max-width: 640px) {
+    .header {
+        background-image: url(../images/banner-mobile.jpg);
+        min-height: 638px;
+    }
+
+    .menu-button {
+        margin-top: 30px;
+    }
+
+    .logo {
+        width: 269px;
+        padding-top: 225px;
+    }
+
+    .logo-link {
+        margin: 0 8px 0 30px;
+    }
+
+    .welcome-title {
+        font-size: 26px;
+        line-height: 1.38;
+    }   
+
+    .welcome {
+        padding-top: 12px;
+    }
+
+    .trend-title-text,
+    .trend-post,
+    .post-title-text,
+    .shop-title-text,
+    .form-title-text {
+        font-size: 16px;
+    }
+
+    .trend-title {
+        margin-top: 40px;
+        margin-bottom: 35px;
+    }
+
+    .trend-group {
+        flex-wrap: wrap;
+    }
+
+    .trend {
+        width: 100%;
+        min-height: 230px;
+
+        margin-bottom: 3px;
+        padding: 15px;
+    }
+
+    .trend-card {
+        padding: 25px 20px;
+    }
+
+    .main-container {
+        flex-wrap: wrap;
+        margin-top: 42px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .post {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .post-content-text {
+        font-size: 14px;
+    }
+
+    .music-post__first {
+        margin-bottom: 5px;
+    }
+
+    .music-post__second {
+        margin-top: 5px;
+    }
+
+    .post-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .post-image-card {
+        width: 100%;
+    } 
+
+    .signature {
+        margin-top: 18px;
+        margin-bottom: 13px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar-title>.sidebar-title-text {
+        font-size: 16px;
+        margin-bottom: 38px;
+    }
+
+    .sidebar-title-text {
+        font-size: 14px;
+    }
+
+    .search-group {
+        width: 100%;
+    }
+
+    .subscription {
+        margin-top: 40px;
+    }
+
+    .tags,
+    .topic {
+        margin-top: 38px;
+    }
+
+    .shop-container {
+        margin-top: 28px;
+    }
+
+    .shop-group {
+        flex-direction: column;
+    }
+
+    .product {
+        width: 100%;
+    } 
+
+    .product:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .product-title {
+        font-size: 17px;
+    }
+
+    .footer-container {
+        margin-top: 40px;
+    }
+
+    .social {
+        margin-bottom: 47px;
+    }
+
+    .form {
+        max-width: 330px;
+        left: calc(50% - 165px);
+        top: calc(50% - 273px);
+        
+        padding: 25px 25px 30px;
+    }    
+
+    .radio-text::before {
+        width: 25px;
+        height: 25px;
+    }
+ }
+
+@media (max-height: 640px) and (orientation: landscape) {
+    .trend {
+        width: calc(50% - 1.5px);
+    } 
+
+    .trend:nth-child(odd) {
+        margin-right: 3px;
+    }
+
+    .trend:nth-child(n+2) {
+        margin-left: 0;
+    }
+
+    .trend:nth-child(n+3) {
+        margin-top: 3px;
+    }
+}

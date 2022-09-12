@@ -618,6 +618,10 @@ body {
 }
 
 .product-img {
+    width: 300px;
+    min-height: 204px;
+    background: #eff6f1;
+
     margin: 0 auto;
 }
 
@@ -1073,6 +1077,11 @@ body {
         margin-top: 28px;
     }
 
+    .product-img {
+        width: 290px;
+        min-height: 226px;
+    }    
+
     .product-title {
         font-size: 17px;
     }
@@ -1245,6 +1254,11 @@ and (orientation: portrait) {
     .product:not(:last-child) {
         margin-bottom: 25px;
     }
+
+    .product-img {
+        width: 284px;
+        min-height: 284px;
+    } 
 
     .product-title {
         font-size: 17px;

@@ -228,11 +228,12 @@ body {
     background-image: url(../images/trend4.jpg);
 }
 
-.trend-card {
+.trend-card { 
     width: 100%;
     border: 3px solid #b59f5b;
 
     padding: 30px;
+    box-sizing: border-box;
 
     position: relative;
     z-index: 2;
@@ -245,6 +246,10 @@ body {
 
     margin-top: 2px;
     margin-bottom: 0;
+}
+
+.trend-post-title {
+    box-sizing: border-box;
 }
 
 .trend-post-link {
@@ -962,6 +967,12 @@ body {
         bottom:  -5px;
     }
 
+    .post-image {
+        width: 100%;
+        max-height: 302px;
+        display: flex;
+    }
+
     .popup-close {
         width: 28px;
         height: 28px;
@@ -1030,11 +1041,6 @@ body {
         flex-wrap: wrap;
     }
 
-    .post-image {
-        width: 100%;
-        height: auto;
-    }
-
     .post-image-card,
     .post-wrapper {
         width: 100%;
@@ -1080,6 +1086,7 @@ body {
     .product-img {
         width: 290px;
         min-height: 226px;
+        display: flex;
     }    
 
     .product-title {
@@ -1130,7 +1137,7 @@ and (orientation: portrait) {
     }
 
     .logo-link {
-        margin: 0 8px 0 30px;
+        margin: 0 auto;
     }
 
     .welcome-title {
@@ -1199,11 +1206,6 @@ and (orientation: portrait) {
         margin-top: 5px;
     }
 
-    .post-image {
-        width: 100%;
-        height: auto;
-    }
-
     .post-image-card {
         width: 100%;
     } 
@@ -1258,6 +1260,7 @@ and (orientation: portrait) {
     .product-img {
         width: 284px;
         min-height: 284px;
+        display: flex;
     } 
 
     .product-title {
